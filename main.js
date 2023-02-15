@@ -12,6 +12,7 @@ Vyřízněte z názvu posledních pět písmen.*/
 
 //Oblibeny film
 let title = 'Vykoupení z věznice Shawshank'
+//let title = prompt('Jaký je tvůj oblíbený film?')
 console.log(title)
 
 //Pocet znaku konzole
@@ -55,16 +56,17 @@ Pro kontrolu vypište tento objekt do stránky. Každou hodnotu vypište jako od
 let email = prompt('Zadej svůj email: ')
 
 let zadanyEmail = document.querySelector('.zadanyEmail')
-zadanyEmail.innerHTML = 'Tvůj oblíbený email je: ' + email
+zadanyEmail.innerHTML = 'Tvůj email je: ' + email
 
 let zavinac = document.querySelector('.zavinac')
-zavinac.innerHTML = 'Zavináč najdeš na ' + email.indexOf('@') + '.' + ' ' + 'pozici'
+zavinac.innerHTML = 'Zavináč najdeš na ' + Number(email.indexOf('@') + 1) + '.' + ' ' + 'pozici'
+//pisi pro normalni uzivatel a ten zacina pocitat od 1, proto +1
 
 let vyriznutiEmail = document.querySelector('.vyriznutiEmail')
-vyriznutiEmail.innerHTML = '' + email.slice(0, email.indexOf('@'))
+vyriznutiEmail.innerHTML = 'Jméno a příjmení: ' + email.slice(0, email.indexOf('@'))
 
 let domena = document.querySelector('.domena')
-domena.innerHTML = email.slice(email.indexOf('@')+1, email.length)
+domena.innerHTML = ' Domena: ' + email.slice(email.indexOf('@')+1, email.length)
 
 
 let parsedEmail = {
@@ -73,10 +75,13 @@ let parsedEmail = {
 }
 //console.log(parsedEmail)
 
-//let {userName,domain} = parsedEmail
+let {userName,domain} = parsedEmail
 
-//let vypisObjekt = document.querySelector('.vypisObjekt')
-//vypisObjekt.innerHTML = userName + domain
+let vypisUser = document.querySelector('.vypisUser')
+vypisUser.innerHTML = 'User name: ' + userName
+
+let vypisDomain = document.querySelector('.vypisDomain')
+vypisDomain.innerHTML = 'Domain: ' + domain
 
 
 
