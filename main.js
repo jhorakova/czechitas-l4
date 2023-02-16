@@ -83,5 +83,42 @@ vypisUser.innerHTML = 'User name: ' + userName
 let vypisDomain = document.querySelector('.vypisDomain')
 vypisDomain.innerHTML = 'Domain: ' + domain
 
+/*Vytvořte webovou stránku, 
+kde uživatel zadá svoji adresu například pro účely doručení objednaného zboží. Požaduje ulici, číslo domu, město a PSČ.
+
+Uložte všechny údaje do vhodně pojmenovaných proměnných.
+Ze zadanách údajů sestavte pomocí interpolace řetězeců obsahující HTML ve formátu jako níže
+<address>
+	<p>Pod Stájemi 67</p>
+	<p>12754 Klysnov</p>
+</address>
+Pomocí document.body.innerHTML vložte sestavené HTML do stránky.*/
+
+let order = {
+	streetName: 'Sokolnická',
+	number: '822',
+	city: 'Brno',
+	postalCode: '620 00'
+}
+
+let { streetName, number, city, postalCode } = order
+
+let content = `
+<address>
+	<p> ${streetName} + ${number}</p>
+	<p> ${postalCode} + ${city}</p>
+</address>
+`
+//console.log(content)
+
+//document.body.innerHTML = content ----- výpis do body zadávám pouze komentáře, protože se nezobrazí předchozí výpisy
+
+let adresa = document.querySelector('.adresa')
+adresa.innerHTML = 'Adresa interpolace řetězců: '+ content
+
+
+
+
+
 
 
