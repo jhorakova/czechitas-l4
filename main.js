@@ -105,8 +105,8 @@ let { streetName, number, city, postalCode } = order
 
 let content = `
 <address>
-	<p> ${streetName} + ${number}</p>
-	<p> ${postalCode} + ${city}</p>
+	<p> ${streetName} ${number}</p>
+	<p> ${postalCode} ${city}</p>
 </address>
 `
 //console.log(content)
