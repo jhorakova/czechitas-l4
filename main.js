@@ -94,6 +94,7 @@ Ze zadanách údajů sestavte pomocí interpolace řetězeců obsahující HTML 
 </address>
 Pomocí document.body.innerHTML vložte sestavené HTML do stránky.*/
 
+/*puvodni reseni - oprava na promt
 let order = {
 	streetName: 'Sokolnická',
 	number: '822',
@@ -101,11 +102,16 @@ let order = {
 	postalCode: '620 00'
 }
 
-let { streetName, number, city, postalCode } = order
+let { streetName, number, city, postalCode } = order*/
+
+let streetName = prompt('Zadej ulici, kde bydlíš: ')
+let houseNumber = prompt('Zadej číslo domu: ') 
+let postalCode = prompt('Zadej PSČ: ')
+let city = prompt('Zadej město, kde bydlíš: ')
 
 let content = `
 <address>
-	<p> ${streetName} ${number}</p>
+	<p> ${streetName} ${houseNumber}</p>
 	<p> ${postalCode} ${city}</p>
 </address>
 `
