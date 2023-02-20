@@ -11,8 +11,8 @@ Vyřízněte z názvu prvních pět písmen.
 Vyřízněte z názvu posledních pět písmen.*/
 
 //Oblibeny film
-let title = 'Vykoupení z věznice Shawshank'
-//let title = prompt('Jaký je tvůj oblíbený film?')
+//let title = 'Vykoupení z věznice Shawshank' -- puvodni reseni
+let title = prompt('Jaký je tvůj oblíbený film?')
 console.log(title)
 
 //Pocet znaku konzole
@@ -28,7 +28,7 @@ vyriznutiPrvni.innerHTML = 'Prvních pět písmen: ' + title.slice(0,5)
 
 //Poslednich pet pismen - zobrazeno web
 let vyriznutiPosledni = document.querySelector('.vyriznutiPosledni')
-vyriznutiPosledni.innerHTML = 'Posleních pět písmen: ' + title.slice(24,29)
+vyriznutiPosledni.innerHTML = 'Posleních pět písmen: ' + title.slice(-5)
 
 
 /*Vytvořte stránku, která bude pracovat s e-mailovými adresami ve formátu
